@@ -6,37 +6,12 @@
       <img src="../assets/img/dc-logo.png" alt="">
     </div>
     <nav>
+
       <ul>
-        <li>
-          <a href="#"> CHARACTERS</a>
+        <li v-for="(link, index) in links" :key="index">
+          <a :href="link.url"> {{link.text}}</a>
         </li>
-         <li>
-          <a href="#" class="active"> COMICS</a>
-        </li>
-         <li>
-          <a href="#"> MOVIES</a>
-        </li>
-         <li>
-          <a href="#"> TV</a>
-        </li>
-         <li>
-          <a href="#"> GAMES</a>
-        </li>
-         <li>
-          <a href="#"> COLLECTIBLES</a>
-        </li>
-         <li>
-          <a href="#"> VIDEOS</a>
-        </li>
-         <li>
-          <a href="#"> FANS</a>
-        </li>
-         <li>
-          <a href="#"> NEWS</a>
-        </li>
-         <li>
-          <a href="#"> SHOP</a>
-        </li>
+        
       </ul>
     </nav>
 
@@ -47,6 +22,63 @@
 <script>
 export default {
   name: 'MyHeader',
+  data() {
+    return {
+      links: [
+              {
+                  text: "CHARACTERS",
+                  url: "#",
+                  current: false,
+              },
+              {
+                  text: "COMICS",
+                  url: "#",
+                  current: true,
+              },
+              {
+                  text: "MOVIES",
+                  url: "#",
+                  current: false,
+              },
+              {
+                  text: "TV",
+                  url: "#",
+                  current: false,
+              },
+              {
+                  text: "GAMES",
+                  url: "#",
+                  current: false,
+              },
+              {
+                  text: "COLLECTIBLES",
+                  url: "#",
+                  current: false,
+              },
+              {
+                  text: "VIDEOS",
+                  url: "#",
+                  current: false,
+              },
+              {
+                  text: "FANS",
+                  url: "#",
+                  current: false,
+              },
+              {
+                  text: "NEWS",
+                  url: "#",
+                  current: false,
+              },
+              {
+                  text: "VIDEOS",
+                  url: "SHOP",
+                  current: false,
+              },
+      ],
+    }
+
+  }
 }
 </script>
 
@@ -60,7 +92,7 @@ export default {
   align-items: center;
   justify-content: space-between;
   height: 100px;
-  margin-top: 20px;
+  
 
   .logo{
     img{
@@ -82,6 +114,7 @@ nav{
         color: $colorBlack;
         font-weight: 500;
         padding-bottom: 36px;
+
         &.active, &:hover{
           border-bottom: 5px solid $primaryColor;
             
