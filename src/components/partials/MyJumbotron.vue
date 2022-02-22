@@ -12,9 +12,10 @@ name:'MyJumbotron'
 
 <style scoped lang="scss">
 .img-container{
-    height: 300px;
+    height: 320px;
     text-align: center;
     img{
+        object-position: 5px top;
         width: 100%;
         height: 100%;
         object-fit: cover;
