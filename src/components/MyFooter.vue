@@ -4,11 +4,13 @@
     <div class="footer-top clearfloat">
       <div class="container">
         <div class="nav-footer">
-
-         <FooterNav title="DC COMICS" :items="menuDcComics"/>
+          <div class="left-nav">
+            <FooterNav title="DC COMICS" :items="menuDcComics"/>
+            <FooterNav title="Shop" :items="shop"/>
+          </div>
          <FooterNav title="DC" :items="dc"/>
          <FooterNav title="SITE" :items="sites"/>
-         <FooterNav title="Shop" :items="shop"/>
+         
         </div>
 
 
@@ -210,7 +212,6 @@ footer{
     background-size: cover;
     margin-top: 150px;
     .container{
-      
       display: flex;
       justify-content: space-around;
 
@@ -219,14 +220,18 @@ footer{
         width: 33%;
         padding-top: 20px;
         display: flex;
-   
+        .left-nav{
+          margin-bottom: 30px;
+        }
       }
       .bg-footer{
         width: 50%;
         float: right;
         img{
           position: absolute;
-          bottom :-40px;
+          top: -60px;
+          width: 438px;
+          right: 260px;
         }
       }
 
