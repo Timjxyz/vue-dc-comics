@@ -8,8 +8,8 @@
     <nav>
 
       <ul>
-        <li v-for="(link, index) in links" :key="index">
-          <a :href="link.url"> {{link.text}}</a>
+        <li v-for="(link, index) in links" :key="index" >
+          <a :class="link.current?'active':''" :href="link.url"> {{link.text}}</a>
         </li>
         
       </ul>

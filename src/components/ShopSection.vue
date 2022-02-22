@@ -2,7 +2,7 @@
   <section class="shop">
     <div class="container">
       <div  v-for="(link, index) in links" :key="index" class="img-shop">
-        <img src="../assets/img/buy-comics-digital-comics.png" alt="">
+        <img img :src="link.url"  alt="">
         <div class="img-text">{{link.text}}</div>
       </div>
      
@@ -18,27 +18,27 @@ export default {
       links: [
           {
               text: "DIGITAL COMICS",
-              url: "-comics-digital-comics.png",
+              url: require("../assets/img/buy-comics-digital-comics.png"),
               current: false,
           },
           {
               text: "DC-MERCHANDISE",
-              url: "-comics-merchandise.png",
+              url: require("../assets/img/buy-comics-merchandise.png"),
               current: true,
           },
           {
               text: "SUBSCRIPTION",
-              url: "-comics-subscriptions.png",
+              url: require("../assets/img/buy-comics-subscriptions.png"),
               current: false,
           },
           {
               text: "COMIC SHOP LOCATOR",
-              url: "-comics-shop-locator.png",
+              url:require( "../assets/img/buy-comics-shop-locator.png"),
               current: false,
           },
           {
               text: "DC POWER VISA",
-              url: "-dc-power-visa.svg",
+              url: require("../assets/img/buy-dc-power-visa.svg"),
               current: false,
           },
         
@@ -69,12 +69,12 @@ export default {
       display: flex;
       align-items: center;
       justify-content: space-around;
-      
-      
+
       img{
+        height:50px;
         width: 50px;
-         justify-content: space-around;
-         object-fit: contain;
+        object-fit: contain;
+        margin-right: 10px;    
       }
 
       .img-text{

@@ -3,126 +3,16 @@
     <!-- Parte superiore del footer -->
     <div class="footer-top clearfloat">
       <div class="container">
-        <nav>
-          <ul>
-            <li>
-              <h3>DC COMICS</h3>
-            </li>
+        <div class="nav-footer">
 
-            <li>
-              <a href="#"> characters</a>
-            </li>
-            <li>
-              <a href="#" class="active"> comics</a>
-            </li>
-            <li>
-              <a href="#"> movies</a>
-            </li>
-            <li>
-              <a href="#"> tv</a>
-            </li>
-            <li>
-              <a href="#"> games</a>
-            </li>
-            <li>
-              <a href="#"> collectibles</a>
-            </li>
-            <li>
-              <a href="#"> videos</a>
-            </li>
-            <li>
-              <a href="#"> fans</a>
-            </li>
-            <li>
-              <a href="#"> news</a>
-            </li>
-            <li>
-              <a href="#"> shop</a>
-            </li>
-          </ul>
-          <ul>
-            <!-- secondo -->
-             <li>
-              <h3>DC COMICS</h3>
-            </li>
+         <FooterNav title="DC COMICS" :items="menuDcComics"/>
+         <FooterNav title="DC" :items="shop"/>
+         <FooterNav title="SITE" :items="sites"/>
+         <FooterNav title="Shop" :items="dc"/>
+        </div>
 
-            <li>
-              <a href="#"> characters</a>
-            </li>
-            <li>
-              <a href="#" class="active"> comics</a>
-            </li>
-             <li>
-              <a href="#"> videos</a>
-            </li>
-            <li>
-              <a href="#"> fans</a>
-            </li>
-            <li>
-              <a href="#"> news</a>
-            </li>
-            <li>
-              <a href="#"> shop</a>
-            </li>
-             <li>
-              <a href="#"> videos</a>
-            </li>
-            <li>
-              <a href="#"> fans</a>
-            </li>
-            <li>
-              <a href="#"> news</a>
-            </li>
-            <li>
-              <a href="#"> shop</a>
-            </li>
-             <li>
-              <a href="#"> videos</a>
-            </li>
-            <li>
-              <a href="#"> fans</a>
-            </li>
-            <li>
-              <a href="#"> news</a>
-            </li>
-            <li>
-              <a href="#"> shop</a>
-            </li>
-          </ul>
 
-          <!-- terzo -->
-          <ul>
-             <li>
-              <h3>DC COMICS</h3>
-            </li>
 
-            <li>
-              <a href="#"> characters</a>
-            </li>
-            <li>
-              <a href="#" class="active"> comics</a>
-            </li>
-             <li>
-              <a href="#"> videos</a>
-            </li>
-          </ul>
-           <!-- quarto -->
-          <ul>
-             <li>
-              <h3>DC COMICS</h3>
-            </li>
-
-            <li>
-              <a href="#"> characters</a>
-            </li>
-            <li>
-              <a href="#" class="active"> comics</a>
-            </li>
-             <li>
-              <a href="#"> videos</a>
-            </li>
-          </ul>
-        </nav>
 
         <div class="bg-footer">
           <img src="../assets/img/dc-logo-bg.png" alt="">
@@ -141,7 +31,7 @@
         <div class="social-footer">
               <a href="#"> FOLLOW US</a>
             <div class="img-social-footer"  v-for="(link, index) in links" :key="index">
-              <img src="../assets/img/footer-facebook.png" alt="">
+              <img img :src="link.url"  alt="">
               
             </div>
             
@@ -155,43 +45,158 @@
 </template>
 
 <script>
+import FooterNav from './partials/FooterNav.vue';
 export default {
   name: 'MyFooter',
+  components: {
+    FooterNav
+  },
   data() {
     return {
       links: [
           {
              
-              url: "../assets/img/footer-facebook.png",
+              url:require( "../assets/img/footer-facebook.png"),
               current: false,
           },
           {
               
-              url: "../assets/img/footer-twitter.png",
+              url: require("../assets/img/footer-twitter.png"),
               current: true,
           },
           {
               
-              url: "../assets/img/footer-youtube.png",
+              url: require("../assets/img/footer-youtube.png"),
               current: false,
           },
           {
               
-              url: "../assets/img/footer-pinterest.png",
+              url: require("../assets/img/footer-pinterest.png"),
               current: false,
           },
           {
               
-              url: "../assets/img/footer-periscope.png",
+              url: require("../assets/img/footer-periscope.png"),
               current: false,
           },
         
       ],
-    }
-
-  }
  
+      menuDcComics: [
+        {
+          src: "#",
+          text: "Characters"
+        },
+        {
+          src: "#",
+          text: "Comics"
+        },
+        {
+          src: "#",
+          text: "Movies"
+        },
+        {
+          src: "#",
+          text: "TV"
+        },
+        {
+          src: "#",
+          text: "Games"
+        },
+        {
+          src: "#",
+          text: "Videos"
+        },
+        {
+          src: "#",
+          text: "News"
+        }
+      ],
+      dc: [
+        {
+          src: "#",
+          text: "Terms Of Use"
+        },
+        {
+          src: "#",
+          text: "Privacy policy (New)"
+        },
+        {
+          src: "#",
+          text: "Ad Choices"
+        },
+        {
+          src: "#",
+          text: "Advertising"
+        },
+        {
+          src: "#",
+          text: "jobs"
+        },
+        {
+          src: "#",
+          text: "Subscrition"
+        },
+        {
+          src: "#",
+          text: "Talent Workshops"
+        },
+        {
+          src: "#",
+          text: "CPSC Certificates"
+        },
+        {
+          src: "#",
+          text: "Rating"
+        },
+        {
+          src: "#",
+          text: "Shop Help"
+        },
+        {
+          src: "#",
+          text: "Contact Us"
+        },
+        
+      ],
+      sites: [
+        {
+          src: "#",
+          text: "DC"
+        },
+        {
+          src: "#",
+          text: "MAD Magazine"
+        },
+        {
+          src: "#",
+          text: "DC Kids"
+        },
+        {
+          src: "#",
+          text: "DC Universe"
+        },
+        {
+          src: "#",
+          text: "DC Power Visa"
+        },
+        
+      ],
+      shop: [
+        {
+          src: "#",
+          text: "Shop DC"
+        },
+        {
+          src: "#",
+          text: "Shop DC Collectibles"
+        },
+        
+      ],
+    }
+  }
 }
+ 
 </script>
 
 
@@ -208,29 +213,15 @@ footer{
       
       display: flex;
       justify-content: space-around;
-      nav{
-        padding-top: 50px;
+
+      .nav-footer{
         float: left;
+        width: 33%;
+        padding-top: 20px;
         display: flex;
-        width: 30%;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        ul{
-          li{
-            list-style: none;
-      
-            h3{
-              color:$colorWhite;
-              margin-bottom: 10px;
-            }
-            a{
-              text-decoration: none;
-              color: gray;
-              text-transform: capitalize;
-              font-size: 12px;
-            }
-          }
-        }
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
       }
       .bg-footer{
         width: 50%;
