@@ -26,7 +26,7 @@ export default {
 @import "../../assets/variables.scss";
 h3{
     color:$colorWhite;
-    margin-bottom: 10px;
+    margin-top: 10px;
 }
  nav{ 
     display: flex;
@@ -34,8 +34,12 @@ h3{
     flex-wrap: nowrap;
     justify-content: space-between;
     ul{
+        
         li{
-        list-style: none;
+            list-style: none;
+            margin-right: 20px;
+           
+
         a{
             text-decoration: none;
             color: gray;
