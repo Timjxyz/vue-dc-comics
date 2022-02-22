@@ -219,9 +219,7 @@ footer{
         width: 33%;
         padding-top: 20px;
         display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+   
       }
       .bg-footer{
         width: 50%;
