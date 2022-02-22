@@ -6,9 +6,9 @@
         <div class="nav-footer">
 
          <FooterNav title="DC COMICS" :items="menuDcComics"/>
-         <FooterNav title="DC" :items="shop"/>
+         <FooterNav title="DC" :items="dc"/>
          <FooterNav title="SITE" :items="sites"/>
-         <FooterNav title="Shop" :items="dc"/>
+         <FooterNav title="Shop" :items="shop"/>
         </div>
 
 
