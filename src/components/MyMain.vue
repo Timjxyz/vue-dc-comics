@@ -1,6 +1,9 @@
 <template>
   <main>
     <MyJumbotron/>
+    <div class="btn-current">
+      <button>CURRENT SERIES</button>
+    </div>
     <div class="container">
       <MainItems
           v-for="(item, index) in items" 
@@ -9,7 +12,9 @@
           :src="item.thumb"
         />
     </div>
-
+    <div class="btn-reload">
+      <button>LOAD MORE</button>
+    </div>
   </main>
 </template>
 
@@ -110,6 +115,21 @@ export default {
 <style scoped lang="scss">
 @import "../assets/variables.scss";
 main{
+  .btn-current{
+    position: absolute;
+    left: 180px;
+    top:400px;
+    
+    button{
+      background-color: $primaryColor;
+      color: $colorWhite;
+      padding: 15px 30px;
+      border: none;
+      font-weight: 600;
+      font-size: 20px;
+      cursor: pointer;
+    }
+  }
   background-color: $backgMain;
   .container{
     height: 100%;
@@ -117,7 +137,19 @@ main{
     display: flex;
     flex-wrap: wrap;
     
-
+  }
+  .btn-reload{
+    text-align: center;
+    padding-bottom: 20px;
+    button{
+      background-color: $primaryColor;
+      color: $colorWhite;
+      padding: 10px 40px;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  
   }
 }
 </style>
